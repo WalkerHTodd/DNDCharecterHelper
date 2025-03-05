@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Character Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>D&D Character Tracker</h1>
+        
+        <div class="input-group">
+            <input id="name" type="text" placeholder="Name">
+            <input id="class" type="text" placeholder="Class">
+            <input id="level" type="number" placeholder="Level">
+            <textarea id="stats" placeholder="Stats"></textarea>
+            <button onclick="saveCharacter()">Save Character</button>
+        </div>
+
+        <div class="buttons">
+            <button onclick="exportCharacters()">Export</button>
+            <label class="import-label">
+                Import <input type="file" id="import-file" accept=".json" onchange="importCharacters()">
+            </label>
+        </div>
+
+        <div id="character-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
